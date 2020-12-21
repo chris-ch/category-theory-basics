@@ -52,3 +52,15 @@ _ε: I → X_
 
 In the case of _Set_, _ε_ is actually able to pick any element of a set object. A global element of _X_ is also called a __section element__ of _X_ or a __point__ of _X_.
 
+We can actually see _I_ as a context and that can be generalized to any other object _A_:
+
+_ε<sub>A</sub>: A → X_
+
+_ε<sub>A</sub>_ is a __generalized element__ of _X_ at __stage__ _A_.
+
+![alt text](https://github.com/chris-ch/category-theory-basics/blob/master/global-element.jpg?raw=true)
+_Handbook of Mathematics, Thierry de Vialar._
+
+
+
+
