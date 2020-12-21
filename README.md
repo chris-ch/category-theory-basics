@@ -58,8 +58,8 @@ _ε<sub>A</sub>: A → X_
 
 _ε<sub>A</sub>_ is a __generalized element__ of _X_ at __stage__ _A_.
 
-![alt text](https://github.com/chris-ch/category-theory-basics/blob/master/global-element.jpg?raw=true)
-_Handbook of Mathematics, Thierry de Vialar._
+![Handbook of Mathematics, Thierry de Vialar](/global-element.png)
+
 
 
 
