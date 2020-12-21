@@ -50,13 +50,13 @@ However when an initial object _I_ is available in a category we have access to 
 
 _ε: I → X_
 
-In the case of _Set_, _ε_ is actually able to pick any element of a set object. A global element of _X_ is also called a __section element__ of _X_ or a __point__ of _X_.
+In the case of _Set_, the morphism _ε_ is actually able to pick any element of a set object. A global element of _X_ is also called a __section element__ of _X_ or a __point__ of _X_.
 
 We can actually see _I_ as a context and that can be generalized to any other object _A_:
 
 _ε<sub>A</sub>: A → X_
 
-_ε<sub>A</sub>_ is a __generalized element__ of _X_ at __stage__ _A_.
+The morphism _ε<sub>A</sub>_ is a __generalized element__ of _X_ at __stage__ _A_.
 
 ![Handbook of Mathematics, Thierry de Vialar](/global-element.png)
 
