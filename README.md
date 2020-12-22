@@ -43,16 +43,20 @@ It does so for every object A in _C<sub>1</sub>_, so we have one __component__ f
 
 _μ<sub>A</sub>: F<sub>1</sub>(A) → F<sub>2</sub>(A)_
 
+
+## Hom functors
+Given any locally small category C we instantly get a category for free called Hom<sub>C</sub>(A,_).
+
 ## Generalized elements
 
 As mentioned above there is nothing such as elements within objects.
-However when an initial object _I_ is available in a category we have access to a __global element__ _ε_ of any object _X_:
+However when a terminal object _T_ is available in a category we have access to a __global element__ _ε_ of any object _X_:
 
-_ε: I → X_
+_ε: T → X_
 
 In the case of _Set_, the morphism _ε_ is actually able to pick any element of a set object. A global element of _X_ is also called a __section element__ of _X_ or a __point__ of _X_.
 
-We can actually see _I_ as a context and that can be generalized to any other object _A_:
+We can actually see _T_ as a context and that can be generalized to any other object _A_:
 
 _ε<sub>A</sub>: A → X_
 
