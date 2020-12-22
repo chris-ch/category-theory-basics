@@ -4,10 +4,12 @@ A few notes about category theory
 ## Preliminary definitions
 
 A __category__ is a collection of __arrows__ between __objects__. Arrows are also called __morphisms__.
+When arrows between two objects form a set the category is said to be __locally small__.
 
 There is no limit to the number of arrows between two objects _A_ and _B_.
 
-Coinciding arrows are necessarily composed, so that if we have _φ: A → B_ and _ψ: B → C_ we also necessarily have _(ψ ○ φ): A → C_
+Coinciding arrows are necessarily composed, so that if we have _φ: A → B_ and _ψ: B → C_ 
+we also necessarily have a morphism denoted _(ψ ○ φ): A → C_
 
 Composition is associative : _(ω ○ ψ) ○ φ = ω ○ (ψ ○ φ)_
 
@@ -22,7 +24,7 @@ An __initial object__ has a unique arrow pointing to every other object. In the 
 because there is only one function from the empty set to any other set, the empty function corresponding to the set containing no relation.
 
 A __terminal object__ has a unique arrow coming from every other object. In the category __Set__ the terminal object is any singleton set.
-All singleton sets being isomorphic to each other they are all good candidates.
+All singleton sets being isomorphic to each other they are all equivalent from a categorical perspective.
 
 In general in category theory identity is up to isomorphism. Whatever may be inside objects are out of reach.
 We only look at the quantity of information, not the information itself.
@@ -41,11 +43,24 @@ for _F<sub>1</sub>: C<sub>1</sub> → C<sub>2</sub>_ and _F<sub>2</sub>: C<sub>1
 
 It does so for every object A in _C<sub>1</sub>_, so we have one __component__ for each object A in _C<sub>1</sub>_:
 
-_μ<sub>A</sub>: F<sub>1</sub>(A) → F<sub>2</sub>(A)_
+_μ<sub>A</sub>: F<sub>1</sub>(A) → F<sub>2</sub>(A)_ 
+is said to be the component of the natural trasnformation _μ_ at _A_.
 
 
-## Hom functors
-Given any locally small category C we instantly get a category for free called Hom<sub>C</sub>(A,_).
+## Hom-functors
+Given any locally small category _C_ we automatically get a second category for free 
+called __Hom-functor__ and denoted __Hom<sub>C</sub>(A , \_)__:
+
+_Hom<sub>C</sub>(A, \_): C → Set_
+
+Given an object _A_ it maps
+  - each object _X_ to the set of morphisms _Hom<sub>C</sub>(A, X)_ also denoted _X<sup>A</sup>_
+  - each morphism _f: X → Y_ to a function _Hom<sub>C</sub>(A, f): Hom<sub>C</sub>(A, X) → Hom<sub>C</sub>(A, Y)_
+    
+Such a _Hom<sub>C</sub>(A, f)_ function exists because we can compose any _φ: A → X_ in _Hom<sub>C</sub>(A, X)_ 
+with _f: X → Y_ and get a function _ψ: A → Y_:
+
+  - _ψ = f ○ φ_ which is an element of _Hom<sub>C</sub>(A, Y)_
 
 ## Generalized elements
 
