@@ -57,29 +57,39 @@ Given an object _A_ it maps
   - each object _X_ to the set of morphisms _Hom<sub>C</sub>(A, X)_ also denoted _X<sup>A</sup>_
   - each morphism _f: X → Y_ to a function _Hom<sub>C</sub>(A, f): Hom<sub>C</sub>(A, X) → Hom<sub>C</sub>(A, Y)_
     
-Such a _Hom<sub>C</sub>(A, f)_ function exists because we can compose any _φ: A → X_ in _Hom<sub>C</sub>(A, X)_ 
-with _f: X → Y_ and get a function _ψ: A → Y_:
+Such a _Hom<sub>C</sub>(A, f)_ function exists because given a morphism _φ: A → X_ in the source category which corresponds to 
+a function in _Hom<sub>C</sub>(A, X)_ and a morphism _f: X → Y_ 
+their composition _ψ = (f ○ φ): A → Y_ exists and corresponds to an element in _Hom<sub>C</sub>(A, Y)_.
 
-  - _ψ = f ○ φ_ which is an element of _Hom<sub>C</sub>(A, Y)_
+  - _ψ = f ○ φ_ which is a morphism corresponding to a function in _Hom<sub>C</sub>(A, Y)_
 
 ## Generalized elements
 
 As mentioned above there is nothing such as elements within objects.
 However when a terminal object _T_ is available in a category we have access to a __global element__ _ε_ of any object _X_:
 
-_ε: T → X_
+- _ε: T → X_
 
 In the case of _Set_, the morphism _ε_ is actually able to pick any element of a set object. A global element of _X_ is also called a __section element__ of _X_ or a __point__ of _X_.
 
 We can actually see _T_ as a context and that can be generalized to any other object _A_:
 
-_ε<sub>A</sub>: A → X_
+- _ε<sub>A</sub>: A → X_
 
-The morphism _ε<sub>A</sub>_ is a __generalized element__ of _X_ at __stage__ _A_.
+The morphism _ε<sub>A</sub> ∈ Hom<sub>C</sub>(A, X)_ is called a __generalized element__ of _X_ at __stage__ _A_,
+or a __A-point__ of _X_.
 
 ![Handbook of Mathematics, Thierry de Vialar](/global-element.png)
 
 
+## Yoneda lemma
 
+A hom-functor _Hom<sub>C</sub>(A , \_)_ is therefore related to a set of generalized elements.
+
+The Yoneda lemma basicaly says that
+
+- _hom(A, \_) ≅ hom(B, \_) ⇔ A ≅ B_
+    
+In other words A≅B iff they have the same generalized elements, up to isomorphism.
 
 
