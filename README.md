@@ -61,7 +61,11 @@ Such a _Hom<sub>C</sub>(A, f)_ function exists because given a morphism _φ: A �
 a function in _Hom<sub>C</sub>(A, X)_ and a morphism _f: X → Y_ 
 their composition _ψ = (f ○ φ): A → Y_ exists and corresponds to an element in _Hom<sub>C</sub>(A, Y)_.
 
-  - _ψ = f ○ φ_ which is a morphism corresponding to a function in _Hom<sub>C</sub>(A, Y)_
+  - _Hom<sub>C</sub>(A, f)( φ ) = f ○ φ_, which is a morphism corresponding to a function in _Hom<sub>C</sub>(A, Y)_
+
+The notation *Hom<sub>C</sub>(A, f) = f ○ \_* is somewhat similar to that of elements in dual vector spaces *Dual(u) = u\* = < u, _>*
+
+A functor naturally isomorphic to _Hom<sub>C</sub>(A , \_)_ is called a __representable functor__.
 
 ## Generalized elements
 
@@ -84,11 +88,14 @@ or a __A-point__ of _X_.
 
 ## Yoneda lemma
 
+Given a functor _F: C → Set_ and the Hom-functor _Hom<sub>C</sub>(A , \_)_, there is a one-to-one correspondance between
+the set of natural transformations from _Hom<sub>C</sub>(A , \_)_ to _F_ and the elements of _F A_.
+
 A hom-functor _Hom<sub>C</sub>(A , \_)_ is therefore related to a set of generalized elements.
 
 The Yoneda lemma basicaly says that
 
-- _hom(A, \_) ≅ hom(B, \_) ⇔ A ≅ B_
+- _Hom(A, \_) ≅ Hom(B, \_) ⇔ A ≅ B_
     
 In other words A≅B iff they have the same generalized elements, up to isomorphism.
 
