@@ -29,13 +29,13 @@ All singleton sets being isomorphic to each other they are all equivalent from a
 In general in category theory identity is up to isomorphism. Whatever may be inside objects are out of reach.
 We only look at the quantity of information, not the information itself.
 
-A __functor__ puts two categories in correspondance
+A __functor__ puts two categories in correspondence.
 
 _F: C<sub>1</sub> → C<sub>2</sub>_
 
 It does so by mapping both objects and morphisms and respecting the structure provided by morphisms.
 
-A __natural transformation__ puts two functors un correspondance
+A __natural transformation__ puts two functors un correspondence
 
 _μ: F<sub>1</sub> → F<sub>2</sub>_
 
@@ -44,7 +44,7 @@ for _F<sub>1</sub>: C<sub>1</sub> → C<sub>2</sub>_ and _F<sub>2</sub>: C<sub>1
 It does so for every object A in _C<sub>1</sub>_, so we have one __component__ for each object A in _C<sub>1</sub>_:
 
 _μ<sub>A</sub>: F<sub>1</sub>(A) → F<sub>2</sub>(A)_ 
-is said to be the component of the natural trasnformation _μ_ at _A_.
+is said to be the component of the natural transformation _μ_ at _A_.
 
 ## Some example of functors
 A graph _G_ is a functor from a category _C_ to _Set_.
@@ -53,10 +53,15 @@ The category _C_ contains 2 objects _e_ and _v_ (for edges and vertices)
 with 2 arrows _s_ and _t_ (for source and target) both flowing from _e_ to _v_.
 
 The Powerset is an endofunctor in _Set_.
+=======
+For any two categories C1 and C2 there is a category denoted _[C<sub>1</sub>, C<sub>2</sub>]_ whose objects are functors _C<sub>1</sub> → C<sub>2</sub>_ 
+and whose arrows are natural transformations.
+
+The set of morphisms between two objects _A_ and _B_ in a category _C_ are denoted _C(A, B)_.
 
 ## Hom-functors
-Given any locally small category _C_ we automatically get a second category for free 
-called __Hom-functor__ and denoted __Hom<sub>C</sub>(A , \_)__:
+Given any locally small category _C_ we automatically get an additional category for free 
+called __hom-functor__ and denoted __Hom<sub>C</sub>(A , \_)__:
 
 _Hom<sub>C</sub>(A, \_): C → Set_
 
@@ -68,7 +73,16 @@ Such a _Hom<sub>C</sub>(A, f)_ function exists because given a morphism _φ: A �
 a function in _Hom<sub>C</sub>(A, X)_ and a morphism _f: X → Y_ 
 their composition _ψ = (f ○ φ): A → Y_ exists and corresponds to an element in _Hom<sub>C</sub>(A, Y)_.
 
-  - _ψ = f ○ φ_ which is a morphism corresponding to a function in _Hom<sub>C</sub>(A, Y)_
+  - _Hom<sub>C</sub>(A, f)( φ ) = f ○ φ_, which is a morphism corresponding to a function in _Hom<sub>C</sub>(A, Y)_
+
+The notation *Hom<sub>C</sub>(A, f) = f ○ \_* is somewhat similar to that of elements in dual vector spaces *Dual(u) = u\* = < u, _>*
+
+A functor _F_ naturally isomorphic to _Hom<sub>C</sub>(A , \_)_ is called a __representable functor__.
+A representation of _F_ is therefore an object _A_ of _C_ together with a natural isomorphism 
+_α: Hom<sub>C</sub>(A, \_) → F_.
+
+The set of natural transformations between the hom-functor *Hom<sub>C</sub>(A , \_) and a functor _F: C → Set_* 
+is denoted _[C, Set](Hom<sub>C</sub>(A , \_), F)_
 
 ## Monoïds
 
@@ -102,12 +116,16 @@ or a __A-point__ of _X_.
 
 ## Yoneda lemma
 
+Given a functor _F: C → Set_ and the Hom-functor _Hom<sub>C</sub>(A , \_)_, there is a one-to-one correspondance between
+the set of natural transformations from _Hom<sub>C</sub>(A , \_)_ to _F_ and the elements of _F A_.
+
 A hom-functor _Hom<sub>C</sub>(A , \_)_ is therefore related to a set of generalized elements.
 
-The Yoneda lemma basicaly says that
+The Yoneda lemma basicaly states that
 
-- _hom(A, \_) ≅ hom(B, \_) ⇔ A ≅ B_
+- _[C, Set](Hom<sub>C</sub>(A , \_), F) ≅ F A_
+
+Corollary:
+- _Hom(A, \_) ≅ Hom(B, \_) ⇔ A ≅ B_
     
 In other words A≅B iff they have the same generalized elements, up to isomorphism.
-
-
