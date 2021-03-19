@@ -46,6 +46,13 @@ It does so for every object A in _C<sub>1</sub>_, so we have one __component__ f
 _μ<sub>A</sub>: F<sub>1</sub>(A) → F<sub>2</sub>(A)_ 
 is said to be the component of the natural trasnformation _μ_ at _A_.
 
+## Some example of functors
+A graph _G_ is a functor from a category _C_ to _Set_.
+
+The category _C_ contains 2 objects _e_ and _v_ (for edges and vertices) 
+with 2 arrows _s_ and _t_ (for source and target) both flowing from _e_ to _v_.
+
+The Powerset is an endofunctor in _Set_.
 
 ## Hom-functors
 Given any locally small category _C_ we automatically get a second category for free 
@@ -62,6 +69,18 @@ a function in _Hom<sub>C</sub>(A, X)_ and a morphism _f: X → Y_
 their composition _ψ = (f ○ φ): A → Y_ exists and corresponds to an element in _Hom<sub>C</sub>(A, Y)_.
 
   - _ψ = f ○ φ_ which is a morphism corresponding to a function in _Hom<sub>C</sub>(A, Y)_
+
+## Monoïds
+
+The basic definition of a _monoïd_ is bound to a set equipped with a binary operation and a neutral element.
+Typically _(ℕ, +)_ forms a monoïd with _1_ as its neutral element.
+
+We can extend that definition to categories with a single object _M_ and arbitrary arrows flowing from _M_ to itself.
+
+In doing so, _Hom(M, M)_ is a set containing each of the arrows and any two arrows can be combined to form another one,
+thereby providing a binary operation, with in particular _Id<sub>M</sub>_ as its neutral element.
+
+Actually any (classical set) monoïd is isomorphic to the hom-set of some single object category.
 
 ## Generalized elements
 
@@ -80,7 +99,6 @@ The morphism _ε<sub>A</sub> ∈ Hom<sub>C</sub>(A, X)_ is called a __generalize
 or a __A-point__ of _X_.
 
 ![Handbook of Mathematics, Thierry de Vialar](/global-element.png)
-
 
 ## Yoneda lemma
 
