@@ -47,19 +47,20 @@ _μ<sub>A</sub>: F<sub>1</sub>(A) → F<sub>2</sub>(A)_
 is said to be the component of the natural transformation _μ_ at _A_.
 
 ## Some example of functors
-A graph _G_ is a functor from a category _C_ to _Set_.
 
-The category _C_ contains 2 objects _e_ and _v_ (for edges and vertices) 
+### Graphs
+A graph _G_ is a functor from a category _Γ_ to _Set_.
+
+The category _Γ_ contains 2 objects _e_ and _v_ (for edges and vertices) 
 with 2 arrows _s_ and _t_ (for source and target) both flowing from _e_ to _v_.
 
-The Powerset is an endofunctor in _Set_.
-=======
+### The Powerset is an endofunctor in _Set_
 For any two categories C1 and C2 there is a category denoted _[C<sub>1</sub>, C<sub>2</sub>]_ whose objects are functors _C<sub>1</sub> → C<sub>2</sub>_ 
 and whose arrows are natural transformations.
 
 The set of morphisms between two objects _A_ and _B_ in a category _C_ are denoted _C(A, B)_.
 
-## Hom-functors
+### Hom-functors
 Given any locally small category _C_ we automatically get an additional category for free 
 called __hom-functor__ and denoted __Hom<sub>C</sub>(A , \_)__:
 
