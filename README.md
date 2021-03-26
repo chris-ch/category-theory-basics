@@ -81,24 +81,27 @@ Note that the expression *Hom<sub>A</sub>( f ) = f ○ \_* is somewhat similar t
 The set of natural transformations between the hom-functor *Hom<sub>A</sub> and a functor _F: C → Set_* 
 is denoted _[C, Set](Hom<sub>A</sub>, F)_
 
+### Representable functors
 A functor _F_ naturally isomorphic to _Hom<sub>A</sub>_ is called a __representable functor__.
 A representation of _F_ is therefore an object _A_ of _C_ together with a natural isomorphism 
 _α: Hom<sub>A</sub> → F_.
 
+#### Example
 In programming, _List_ is typically **not** representable:
 
-For _List_ to be representable by some type _r_ we would need two functions:
+For _List_ to be representable by some type _r_ we would need to implement two functions:
 
-  - _∀ a. ψ :: Reader r a → [a]_
-  - _∀ a. φ :: [a] → Reader r a_
+  - _∀ a. φ :: Reader r a → [a]_
+  - _∀ a. ψ :: [a] → Reader r a_
 
-While there is always an implementation for the first function, there is none for the second one 
-because of the case when the empty list is provided: in that case there is no way to find one single implementation
-valid for all types _a_. Returning a constant of some particular type would not work.
+While there is always an implementation for the first function _φ_ (actually as many as there are lists of _r_ according
+to the _yoneda lemma_), there is none for the second one _ψ_ because of the case when the empty list is provided:
+in that case there is no way to find one single implementation  valid for all types _a_ (a function returning a constant
+of some particular type would not work).
 
 ## Monoïds
 
-The basic definition of a _monoïd_ is bound to a set equipped with a binary operation and a neutral element.
+The basic definition of a __monoïd__ is bound to a set equipped with a binary operation and a neutral element.
 Typically _(ℕ, +)_ forms a monoïd with _1_ as its neutral element.
 
 We can extend that definition to categories with a single object _M_ and arbitrary arrows flowing from _M_ to itself.
@@ -106,7 +109,7 @@ We can extend that definition to categories with a single object _M_ and arbitra
 In doing so, _Hom<sub>M</sub>(M)_ is a set containing each of the arrows and any two arrows can be combined to form another one,
 thereby providing a binary operation, with in particular _Id<sub>M</sub>_ as its neutral element.
 
-Actually any (classical set) monoïd is isomorphic to the hom-set of some single object category.
+Actually any monoïd (in the traditional sense for sets) is isomorphic to the hom-set of some single object category.
 
 ## Generalized elements
 
