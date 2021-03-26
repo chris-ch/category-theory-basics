@@ -62,28 +62,39 @@ The set of morphisms between two objects _A_ and _B_ in a category _C_ are denot
 
 ### Hom-functors
 Given any locally small category _C_ we automatically get an additional category for free 
-called __hom-functor__ and denoted __Hom<sub>C</sub>(A , \_)__:
+called __hom-functor__ and denoted __Hom<sub>A</sub>__:
 
-_Hom<sub>C</sub>(A, \_): C → Set_
+_Hom<sub>A</sub>: C → Set_
 
-Given an object _A_ it maps
-  - each object _X_ to the set of morphisms _Hom<sub>C</sub>(A, X)_ also denoted _X<sup>A</sup>_
-  - each morphism _f: X → Y_ to a function _Hom<sub>C</sub>(A, f): Hom<sub>C</sub>(A, X) → Hom<sub>C</sub>(A, Y)_
+Parametrized by an object _A_ it maps
+  - each object _X_ to the set of morphisms _Hom<sub>A</sub>(X)_ also denoted _X<sup>A</sup>_
+  - each morphism _f: X → Y_ to a function _Hom<sub>A</sub>(f): Hom<sub>A</sub>(X) → Hom<sub>A</sub>(Y)_
     
-Such a _Hom<sub>C</sub>(A, f)_ function exists because given a morphism _φ: A → X_ in the source category which corresponds to 
-a function in _Hom<sub>C</sub>(A, X)_ and a morphism _f: X → Y_ 
-their composition _ψ = (f ○ φ): A → Y_ exists and corresponds to an element in _Hom<sub>C</sub>(A, Y)_.
+Such a _Hom<sub>A</sub>(f)_ function exists because given a morphism _φ: A → X_ in the source category which corresponds to 
+a function in _Hom<sub>A</sub>(X)_ and a morphism _f: X → Y_ 
+their composition _ψ = (f ○ φ): A → Y_ exists and corresponds to an element in _Hom<sub>A</sub>(Y)_.
 
-  - _Hom<sub>C</sub>(A, f)( φ ) = f ○ φ_, which is a morphism corresponding to a function in _Hom<sub>C</sub>(A, Y)_
+  - _Hom<sub>A</sub>( f )( φ ) = f ○ φ_, which is a morphism corresponding to a function in _Hom<sub>A</sub>(Y)_
 
-The notation *Hom<sub>C</sub>(A, f) = f ○ \_* is somewhat similar to that of elements in dual vector spaces *Dual(u) = u\* = < u, _>*
+Note that the expression *Hom<sub>A</sub>( f ) = f ○ \_* is somewhat similar to that of elements in dual vector spaces *Dual( u ) = u\* = < u, _>*
 
-A functor _F_ naturally isomorphic to _Hom<sub>C</sub>(A , \_)_ is called a __representable functor__.
+The set of natural transformations between the hom-functor *Hom<sub>A</sub> and a functor _F: C → Set_* 
+is denoted _[C, Set](Hom<sub>A</sub>, F)_
+
+A functor _F_ naturally isomorphic to _Hom<sub>A</sub>_ is called a __representable functor__.
 A representation of _F_ is therefore an object _A_ of _C_ together with a natural isomorphism 
-_α: Hom<sub>C</sub>(A, \_) → F_.
+_α: Hom<sub>A</sub> → F_.
 
-The set of natural transformations between the hom-functor *Hom<sub>C</sub>(A , \_) and a functor _F: C → Set_* 
-is denoted _[C, Set](Hom<sub>C</sub>(A , \_), F)_
+In programming, _List_ is typically **not** representable:
+
+For _List_ to be representable by some type _r_ we would need two functions:
+
+  - _∀ a. ψ :: Reader r a → [a]_
+  - _∀ a. φ :: [a] → Reader r a_
+
+While there is always an implementation for the first function, there is none for the second one 
+because of the case when the empty list is provided: in that case there is no way to find one single implementation
+valid for all types _a_. Returning a constant of some particular type would not work.
 
 ## Monoïds
 
@@ -92,7 +103,7 @@ Typically _(ℕ, +)_ forms a monoïd with _1_ as its neutral element.
 
 We can extend that definition to categories with a single object _M_ and arbitrary arrows flowing from _M_ to itself.
 
-In doing so, _Hom(M, M)_ is a set containing each of the arrows and any two arrows can be combined to form another one,
+In doing so, _Hom<sub>M</sub>(M)_ is a set containing each of the arrows and any two arrows can be combined to form another one,
 thereby providing a binary operation, with in particular _Id<sub>M</sub>_ as its neutral element.
 
 Actually any (classical set) monoïd is isomorphic to the hom-set of some single object category.
@@ -117,16 +128,18 @@ or a __A-point__ of _X_.
 
 ## Yoneda lemma
 
-Given a functor _F: C → Set_ and the Hom-functor _Hom<sub>C</sub>(A , \_)_, there is a one-to-one correspondance between
-the set of natural transformations from _Hom<sub>C</sub>(A , \_)_ to _F_ and the elements of _F A_.
-
-A hom-functor _Hom<sub>C</sub>(A , \_)_ is therefore related to a set of generalized elements.
-
 The Yoneda lemma basicaly states that
 
 - _[C, Set](Hom<sub>C</sub>(A , \_), F) ≅ F A_
 
+Given a functor _F: C → Set_ and the Hom-functor _Hom<sub>C</sub>(A , \_)_, there is a one-to-one correspondance between
+the set of natural transformations from _Hom<sub>C</sub>(A , \_)_ to _F_ and the elements of _F A_.
+
+## Yoneda embedding
+
 Corollary:
 - _Hom(A, \_) ≅ Hom(B, \_) ⇔ A ≅ B_
     
+A hom-functor _Hom<sub>C</sub>(A , \_)_ is therefore related to a set of generalized elements.
+
 In other words A≅B iff they have the same generalized elements, up to isomorphism.
