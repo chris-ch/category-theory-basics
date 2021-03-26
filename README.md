@@ -121,7 +121,7 @@ We can actually see _T_ as a context and that can be generalized to any other ob
 
 - _ε<sub>A</sub>: A → X_
 
-The morphism _ε<sub>A</sub> ∈ Hom<sub>C</sub>(A, X)_ is called a __generalized element__ of _X_ at __stage__ _A_,
+The morphism _ε<sub>A</sub> ∈ Hom<sub>A</sub>(X)_ is called a __generalized element__ of _X_ at __stage__ _A_,
 or a __A-point__ of _X_.
 
 ![Handbook of Mathematics, Thierry de Vialar](/global-element.png)
@@ -130,16 +130,16 @@ or a __A-point__ of _X_.
 
 The Yoneda lemma basicaly states that
 
-- _[C, Set](Hom<sub>C</sub>(A , \_), F) ≅ F A_
+- _[C, Set](Hom<sub>A</sub>, F) ≅ F A_
 
-Given a functor _F: C → Set_ and the Hom-functor _Hom<sub>C</sub>(A , \_)_, there is a one-to-one correspondance between
-the set of natural transformations from _Hom<sub>C</sub>(A , \_)_ to _F_ and the elements of _F A_.
+Given a functor _F: C → Set_ and the Hom-functor _Hom<sub>A</sub>_, there is a one-to-one correspondance between
+the set of natural transformations from _Hom<sub>A</sub>_ to _F_ and the elements of _F A_.
 
 ## Yoneda embedding
 
 Corollary:
-- _Hom(A, \_) ≅ Hom(B, \_) ⇔ A ≅ B_
-    
-A hom-functor _Hom<sub>C</sub>(A , \_)_ is therefore related to a set of generalized elements.
+- _Hom<sub>A</sub> ≅ Hom<sub>B</sub> ⇔ A ≅ B_
+
+A hom-functor _Hom<sub>A</sub>_ is therefore related to a set of generalized elements.
 
 In other words A≅B iff they have the same generalized elements, up to isomorphism.
