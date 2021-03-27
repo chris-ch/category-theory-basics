@@ -133,12 +133,21 @@ or a __A-point__ of _X_.
 
 The Yoneda lemma basicaly states that
 
-- _[C, Set](Hom<sub>A</sub>, F) ≅ F A_
+- _[C, Set] (Hom<sub>A</sub>, F) ≅ F A_
 
 Given a functor _F: C → Set_ and the Hom-functor _Hom<sub>A</sub>_, there is a one-to-one correspondance between
 the set of natural transformations from _Hom<sub>A</sub>_ to _F_ and the elements of _F A_.
 
 ## Yoneda embedding
+
+Applying the Yoneda lemma to _F = Hom<sub>B</sub>_ we get:
+- _[C, Set] (Hom<sub>A</sub>, Hom<sub>B</sub>) ≅ Hom<sub>B</sub> (A) = C (B, A)_
+
+The set of arrows from _B_ to _A_ arbitrary objects in a category _C_ are therefore in one-to-one 
+correspondance with the set of natural transformations from _Hom<sub>A</sub>_ to _Hom<sub>B</sub>_ 
+in the category of functors _[C, Set]_.
+
+The category _C_ is _fully_ and _faithfully_ __embedded__ into the category of functors _[C, Set]_.
 
 Corollary:
 - _Hom<sub>A</sub> ≅ Hom<sub>B</sub> ⇔ A ≅ B_
