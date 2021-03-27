@@ -114,18 +114,23 @@ Actually any monoïd (in the traditional sense for sets) is isomorphic to the ho
 ## Generalized elements
 
 As mentioned above there is nothing such as elements within objects.
-However when a terminal object _T_ is available in a category we have access to a __global element__ _ε_ of any object _X_:
+However when a terminal object __1__ is available in a category we have access to a __global element__ _ε_ of any object __1__:
 
-- _ε: T → X_
+- _ε: __1__ → X_
 
 In the case of _Set_, the morphism _ε_ is actually able to pick any element of a set object. A global element of _X_ is also called a __section element__ of _X_ or a __point__ of _X_.
 
-We can actually see _T_ as a context and that can be generalized to any other object _A_:
+We can actually see __1__ as a context and that can be generalized to any other object _A_:
 
 - _ε<sub>A</sub>: A → X_
 
 The morphism _ε<sub>A</sub> ∈ Hom<sub>A</sub>(X)_ is called a __generalized element__ of _X_ at __stage__ _A_,
 or a __A-point__ of _X_.
+
+The set of such morphisms _A → X_ is sometimes written as _X<sup>A</sup>_, which are themselves objects in _Set_.
+
+ _X<sup>__1__</sup>_ is enough in order to describe _X_ as a set because they have no structure and are only
+defined by their elements. Using higher "powers" is required in order to take into account an additional structure.
 
 ![Handbook of Mathematics, Thierry de Vialar](/global-element.png)
 
