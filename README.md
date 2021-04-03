@@ -159,7 +159,7 @@ The _Yoneda embedding_ is the functor _Ƴ: C → [C<sup>Op</sup>, Set]_ that map
 to the functor _Hom<sup>X</sup>_ in category _[C<sup>Op</sup>, Set]_ and a morphism _φ: X → Y_ to 
 the natural transformation _μ(φ): Hom<sup>X</sup> → Hom<sup>Y</sup>_
 
-The category _C_ is _fully_ and _faithfully_ __embedded__ into the category of functors _[C, Set]_.
+The category _C_ is _fully_ and _faithfully_ __embedded__ into the category of functors _[C<sup>Op</sup>, Set]_.
 
 Corollary:
 - _Hom<sub>A</sub> ≅ Hom<sub>B</sub> ⇔ A ≅ B_
