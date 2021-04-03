@@ -162,8 +162,14 @@ the natural transformation _μ(φ): Hom<sup>X</sup> → Hom<sup>Y</sup>_
 The category _C_ is _fully_ and _faithfully_ __embedded__ into the category of functors _[C<sup>Op</sup>, Set]_.
 
 Corollary:
-- _Hom<sub>A</sub> ≅ Hom<sub>B</sub> ⇔ A ≅ B_
+- _Hom<sub>A</sub> ≅ Hom<sub>B</sub> ⇔ Hom<sup>A</sup> ≅ Hom<sup>B</sup> ⇔ A ≅ B_
 
-A hom-functor _Hom<sub>A</sub>_ is therefore related to a set of generalized elements.
+An object is completely determined by its relationships to other objects: knowing all the arrows going into it, 
+or knowing all the arrows going out of it, identifies it up to isomorphism.
 
+The knowledge of the arrows going out of an object _A_ is encoded by the functor _Hom<sub>A</sub>_,
+while the knowledge of arrows going into _A_ is encoded by the functor _Hom<sup>A</sup>_.
+
+A hom-functor _Hom<sub>A</sub>_ is therefore related to a set of generalized elements. 
 In other words A≅B iff they have the same generalized elements, up to isomorphism.
+
