@@ -146,11 +146,18 @@ the set of natural transformations from _Hom<sub>A</sub>_ to _F_ and the element
 ## Yoneda embedding
 
 Applying the Yoneda lemma to _F = Hom<sub>B</sub>_ we get:
-- _[C, Set] (Hom<sub>A</sub>, Hom<sub>B</sub>) ≅ Hom<sub>B</sub> (A) = C (B, A)_
+- _C (B, A) ≅ [C, Set] (Hom<sub>A</sub>, Hom<sub>B</sub>)_
 
-The set of arrows from _B_ to _A_ arbitrary objects in a category _C_ are therefore in one-to-one 
+The set of arrows from two arbitrary objects _B_ to _A_ in a category _C_ are therefore in one-to-one 
 correspondance with the set of natural transformations from _Hom<sub>A</sub>_ to _Hom<sub>B</sub>_ 
 in the category of functors _[C, Set]_.
+
+After reindexing :
+- _C (X, Y) ≅ [C<sup>Op</sup>, Set] (Hom<sup>X</sup>, Hom<sup>Y</sup>)_
+
+The _Yoneda embedding_ is the functor _Ƴ: C → [C<sup>Op</sup>, Set]_ that maps an object X in category _C_
+to the functor _Hom<sup>X</sup>_ in category _[C<sup>Op</sup>, Set]_ and a morphism _φ: X → Y_ to 
+the natural transformation _μ(φ): Hom<sup>X</sup> → Hom<sup>Y</sup>_
 
 The category _C_ is _fully_ and _faithfully_ __embedded__ into the category of functors _[C, Set]_.
 
