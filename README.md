@@ -141,8 +141,8 @@ The Yoneda lemma basicaly states that
 - _[C, Set] (Hom<sub>A</sub>, F) ≅ F A_
 
 Given a functor _F: C → Set_ and the Hom-functor _Hom<sub>A</sub>_, there is a one-to-one correspondance between
-the set of natural transformations from _Hom<sub>A</sub>_ to _F_ and the elements of _F A_.
-
+the set of natural transformations from _Hom<sub>A</sub>_ to _F_ and the elements in _F A_.
+     
 ## Yoneda embedding
 
 Applying the Yoneda lemma to _F = Hom<sub>B</sub>_ we get:
