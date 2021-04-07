@@ -81,6 +81,11 @@ Note that the expression *Hom<sub>A</sub>( f ) = f ○ \_* is somewhat similar t
 The set of natural transformations between the hom-functor *Hom<sub>A</sub> and a functor _F: C → Set_* 
 is denoted _[C, Set](Hom<sub>A</sub>, F)_
 
+Because of composition, once _A_ is fixed, there are only two types of objects in the category: 
+those that are only one incoming morphism away from _A_ and those that get sent to the initial object in _Set_, 
+that is the null set, either because they have no relation to _A_ or because they only have outgoing morphisms 
+into _A_.
+
 ### Representable functors
 A functor _F_ naturally isomorphic to _Hom<sub>A</sub>_ is called a __representable functor__.
 A representation of _F_ is therefore an object _A_ of _C_ together with a natural isomorphism 
