@@ -60,6 +60,10 @@ and whose arrows are natural transformations.
 
 The set of morphisms between two objects _A_ and _B_ in a category _C_ are denoted _C(A, B)_.
 
+### Ordered sets
+
+The set _ℤ_ and the set _ℝ_ can be seen as categories with morphisms _a → b_ whenever _a ≤ b_.
+
 ### Hom-functors
 Given any locally small category _C_ we automatically get an additional category for free 
 called __hom-functor__ and denoted __Hom<sub>A</sub>__:
@@ -178,3 +182,19 @@ while the knowledge of arrows going into _A_ is encoded by the functor _Hom<sup>
 A hom-functor _Hom<sub>A</sub>_ is therefore related to a set of generalized elements. 
 In other words A≅B iff they have the same generalized elements, up to isomorphism.
 
+## Adjunctions
+
+### Example
+
+In the case of categories _ℤ_ and _ℝ_ with morphisms _a → b_ whenever _a ≤ b_, let us define the two functors:
+
+_I: ℤ → ℝ_ such that _I( a<sub>ℤ</sub> ) = a<sub>ℝ</sub>_ (simple inclusion)
+
+and
+
+_F: ℝ → ℤ_ such that _F( a ) = ⌊a⌋_ (floor)
+
+For example _F( π ) = 3_ and _I( 2<sub>ℤ</sub> ) = 2<sub>ℝ</sub>_
+
+Then _I_ is a right-adjoint to _F_. This simply means that for _a ∈ ℤ_ and _b ∈ ℝ_
+we have _a ≤ ⌊b⌋ ⇔ a ≤ b_
