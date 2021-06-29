@@ -182,6 +182,17 @@ while the knowledge of arrows going into _A_ is encoded by the functor _Hom<sup>
 A hom-functor _Hom<sub>A</sub>_ is therefore related to a set of generalized elements. 
 In other words A≅B iff they have the same generalized elements, up to isomorphism.
 
+### Similarity with Cayley's theorem
+
+_Cayley's theorem_ establishes the correspondence between the structure of elements in a group
+with a specific binary operation and the structure of functions using the standard
+composition operator.
+
+The corresponding function group is the group of permutations of the set of elements of
+the original group: we have _P<sub>a * b</sub> = P<sub>a</sub> ○ P<sub>b</sub>_
+for some group _G( E, *)_,  _a, b in  E x E_ and _P<sub>m</sub> in B(E, E)_ the permutation associated
+to the element _m in E_ by _P<sub>m</sub>(n) = m * n_
+
 ## Adjunctions
 
 ### Example
